@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Simple Password Generator</title>
   </head>
   <body>
-    
+    <header>
+      <h1 class="title">Password Generator</h1>
+      <h2 class="subtitle" >Simple, Quick, Safe</h2>
+    </header>
+    <section id="generator-container">
+      <input type="text" name="password-output" id="password-output" placeholder="* * * * * * * * *">
+      <h1 class="title">Customize Password</h1>
+      <section id="generator-options">
+        <label for="password-length" style="margin: 0 5px;">Length: </label>
+        <input type="number" min="1" max="50" name="password-length" id="password-length" placeholder="6">
+      </section>
+    </section>
   </body>
+  <script src="./script"></script>
 </html>
