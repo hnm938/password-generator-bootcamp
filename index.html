@@ -4,22 +4,91 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/b3cad2a71b.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Simple Password Generator</title>
   </head>
   <body>
     <header>
       <h1 class="title">Password Generator</h1>
-      <h2 class="subtitle" >Simple, Quick, Safe</h2>
+      <h2 class="subtitle">Simple, Quick, Safe</h2>
     </header>
     <section id="generator-container">
-      <input type="text" name="password-output" id="password-output" placeholder="* * * * * * * * *">
+      <div id="generator-output-container">
+        <input
+          type="text"
+          name="password-output"
+          id="password-output"
+          placeholder="* * * * * * * * *"
+        />
+        <button onclick="copyPassword()">
+          <i class="fa-regular fa-copy"></i>
+        </button>
+        <button
+          onclick="generatePassword(document.getElementById('password-length').value)"
+        >
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+      </div>
       <h1 class="title">Customize Password</h1>
       <section id="generator-options">
-        <label for="password-length" style="margin: 0 5px;">Length: </label>
-        <input type="number" min="1" max="50" name="password-length" id="password-length" placeholder="6">
+        <section style="margin: 0 25px">
+          <label for="password-length" style="margin: 0 5px">Length: </label>
+          <input
+            type="number"
+            min="1"
+            max="50"
+            name="password-length"
+            id="password-length"
+            placeholder="6"
+          />
+          <input
+            style="width: 150px"
+            type="range"
+            min="1"
+            max="50"
+            name="password-length-slider"
+            class="slider"
+            id="password-length-slider"
+            value="6"
+          />
+        </section>
+        <section id="generator-checkbox-container">
+          <div>
+            <label for="enable-uppercase">Enable Uppercase</label>
+            <input
+              type="checkbox"
+              name="enable-uppercase"
+              id="enable-upercase-checkbox"
+              onclick="enableUppercase = !enableUppercase"
+            />
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <label for="enable-numbers">Enable Numbers</label>
+            <input
+              type="checkbox"
+              name="enable-numbers"
+              id="enable-numbers-checkbox"
+              onclick="enableNumbers = !enableNumbers"
+            />
+          </div>
+          <div>
+            <label for="enable-symbols">Enable Symbols</label>
+            <input
+              type="checkbox"
+              name="enable-symbols"
+              id="enable-symbols-checkbox"
+              onclick="enableSymbols = !enableSymbols"
+            />
+            <span class="checkmark"></span>
+          </div>
+        </section>
       </section>
     </section>
   </body>
-  <script src="./script"></script>
+  <script src="./script.js"></script>
 </html>
