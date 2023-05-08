@@ -20,6 +20,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  overflow-x: hidden;
 }
 
 header {
@@ -58,7 +60,7 @@ header .subtitle {
 
 #generator-container {
   width: 45vw;
-  height: 300px;
+  height: fit-content;
   margin: 100px 0;
   padding: 25px;
 
@@ -183,11 +185,47 @@ header .subtitle {
 }
 #generator-checkbox-container div input[type="checkbox"] {
   position: absolute;
-  right: 0; top: 50%;
+  right: 0;
+  top: 50%;
   transform: translateY(-50%);
-  
+
   width: 20px;
   aspect-ratio: 1;
+}
+
+#generator-advanced-options {
+  width: 50%;
+  min-width: fit-content;
+  margin-top: 15px;
+}
+
+#range-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#range-options h2 {
+  width: 100%;
+  font-weight: 500;
+  align-self: flex-start;
+  border-bottom: solid var(--red-1) 2px;
+  margin: 20px 0 15px 0;
+  padding-bottom: 5px;
+}
+#range-options div {
+  font-weight: 600;
+}
+#range-options div input[type="number"] {
+  width: 75px;
+  margin: 0 10px;
+  border: none;
+  border-bottom: solid lightgray 2px;
+  outline: none;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 5100;
+  font-size: 20px;
 }
 
 input[type="range"] {
@@ -250,7 +288,6 @@ input[type="range"]:disabled {
 }
 
 /* === WebKit specific styles === */
-
 
 input[type="range"],
 input[type="range"]::-webkit-slider-runnable-track,

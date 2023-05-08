@@ -65,7 +65,6 @@
               id="enable-upercase-checkbox"
               onclick="enableUppercase = !enableUppercase"
             />
-            <span class="checkmark"></span>
           </div>
           <div>
             <label for="enable-numbers">Use Numbers</label>
@@ -84,7 +83,132 @@
               id="enable-symbols-checkbox"
               onclick="enableSymbols = !enableSymbols"
             />
-            <span class="checkmark"></span>
+          </div>
+        </section>
+      </section>
+      <h1 class="title">
+        Advanced Options
+        <i
+          class="fa-sharp fa-solid fa-circle-info"
+          onclick="advancedInfo()"
+          style="cursor: pointer; filter: brightness(0.9)"
+        ></i>
+      </h1>
+      <section id="generator-advanced-options">
+        <section id="range-options">
+          <h2>Uppercase:</h2>
+          <div>
+            range
+            <input
+              type="number"
+              min="1"
+              name="uppercase-range-min"
+              id="uppercase-range-min"
+              placeholder="1"
+              oninput="uppercaseRangeMin = parseInt(this.value)"
+            />
+            -
+            <input
+              type="number"
+              min="1"
+              name="uppercase-range-max"
+              id="uppercase-range-max"
+              placeholder="3"
+              oninput="uppercaseRangeMax = parseInt(this.value)"
+            />
+            increase
+            <input
+              type="number"
+              name="uppercase-range-increase"
+              id="uppercase-range-increase"
+              placeholder="1"
+              oninput="uppercaseRangeIncrease = parseInt(this.value)"
+            />
+            every
+            <input
+              type="number"
+              name="uppercase-range-step"
+              id="uppercase-range-step"
+              placeholder="2"
+              oninput="uppercaseRangeStep = parseInt(this.value)"
+            />
+            steps
+          </div>
+          <h2>Numbers:</h2>
+          <div>
+            range
+            <input
+              type="number"
+              min="1"
+              name="number-range-min"
+              id="number-range-min"
+              placeholder="1"
+              oninput="numberRangeMin = parseInt(this.value)"
+            />
+            -
+            <input
+              type="number"
+              min="1"
+              name="number-range-max"
+              id="number-range-max"
+              placeholder="3"
+              oninput="numberRangeMax = parseInt(this.value)"
+            />
+            increase
+            <input
+              type="number"
+              name="number-range-increase"
+              id="number-range-increase"
+              placeholder="1"
+              oninput="numberRangeIncrease = parseInt(this.value)"
+            />
+            every
+            <input
+              type="number"
+              name="number-range-step"
+              id="number-range-step"
+              placeholder="4"
+              oninput="numberRangeStep = parseInt(this.value)"
+            />
+            steps
+          </div>
+          <h2>Symbols:</h2>
+          <div>
+            range
+            <input
+              type="number"
+              min="1"
+              name="symbol-range-min"
+              id="symbol-range-min"
+              placeholder="1"
+              oninput="symbolRangeMin = parseInt(this.value)"
+            />
+            -
+            <input
+              type="number"
+              min="1"
+              name="symbol-range-max"
+              id="symbol-range-max"
+              placeholder="2"
+              oninput="symbolRangeMax = parseInt(this.value)"
+            />
+            increase
+            <input
+              type="number"
+              name="symbol-range-increase"
+              id="symbol-range-increase"
+              placeholder="1"
+              oninput="symbolRangeIncrease = parseInt(this.value)"
+            />
+            every
+            <input
+              type="number"
+              name="symbol-range-step"
+              id="symbol-range-step"
+              placeholder="6"
+              oninput="symbolRangeStep = parseInt(this.value)"
+            />
+            steps
           </div>
         </section>
       </section>
