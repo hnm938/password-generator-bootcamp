@@ -14,7 +14,7 @@ function generatePassword(passwordLength) {
 
     // Uppercase variables
     var uppercaseCount = 0;
-    var uppercaseCountRange = [1, 3 + Math.floor(passwordLength / 4)];
+    var uppercaseCountRange = [1, 3 + Math.floor(passwordLength / 2)];
 
     // Symbol variables
     var symbolCount = 0;
