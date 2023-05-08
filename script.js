@@ -26,10 +26,6 @@ var symbolRangeStep = 6;
 
 function generatePassword(passwordLength) {
   if (passwordLength <= 50 && passwordLength >= 1) {
-    // ADD ADVANCED SECTION
-    // MAKE RANGES MODIFIABLE
-    // MAKE RANGE INCREASE MODIFIABLE
-
     // Number variables
     var numberCount = 0;
     var numberCountRange = [
@@ -117,12 +113,15 @@ function generatePassword(passwordLength) {
   }
 }
 
+// function to copy text to the clipboard
 function copyPassword() {
   const passwordOutput = document.getElementById("password-output");
 
+  // select all the text in the input field
   passwordOutput.select();
   passwordOutput.setSelectionRange(0, 999999);
 
+  // copy content to the clipboard and print it out
   navigator.clipboard.writeText(passwordOutput.value);
 
   alert("🗝️ Password Copied to Clipboard 🗝️");
