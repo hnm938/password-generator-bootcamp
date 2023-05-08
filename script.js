@@ -8,6 +8,10 @@ var enableNumbers = false;
 
 function generatePassword(passwordLength) {
   if (passwordLength <= 50 && passwordLength >= 1) {
+    // ADD ADVANCED SECTION
+    // MAKE RANGES MODIFIABLE
+    // MAKE RANGE INCREASE MODIFIABLE
+    
     // Number variables
     var numberCount = 0;
     var numberCountRange = [1, 3 + Math.floor(passwordLength / 4)];
