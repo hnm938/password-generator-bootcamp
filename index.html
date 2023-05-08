@@ -17,6 +17,9 @@
       <h2 class="subtitle">Simple, Quick, Safe</h2>
     </header>
     <section id="generator-container">
+      <h1 style="margin-bottom: 15px; font-size: 1.75em">
+        🔒Your Super Secrete Password🔒
+      </h1>
       <div id="generator-output-container">
         <input
           type="text"
@@ -32,8 +35,13 @@
         >
           <i class="fa-solid fa-arrows-rotate"></i>
         </button>
+        <button
+          onclick="savePassword()"
+        >
+          <i class="fa-solid fa-download"></i>
+        </button>
       </div>
-      <h1 class="title">Customize Password</h1>
+      <h2 class="title">Customize Password</h2>
       <section id="generator-options">
         <section style="margin: 0 25px">
           <label for="password-length" style="margin: 0 5px">Length: </label>
@@ -86,17 +94,17 @@
           </div>
         </section>
       </section>
-      <h1 class="title">
+      <h2 class="title">
         Advanced Options
         <i
           class="fa-sharp fa-solid fa-circle-info"
           onclick="advancedInfo()"
           style="cursor: pointer; filter: brightness(0.9)"
         ></i>
-      </h1>
+      </h2>
       <section id="generator-advanced-options">
         <section id="range-options">
-          <h2>Uppercase:</h2>
+          <h3>Uppercase:</h3>
           <div>
             range
             <input
@@ -134,7 +142,7 @@
             />
             steps
           </div>
-          <h2>Numbers:</h2>
+          <h3>Numbers:</h3>
           <div>
             range
             <input
@@ -172,7 +180,7 @@
             />
             steps
           </div>
-          <h2>Symbols:</h2>
+          <h3>Symbols:</h3>
           <div>
             range
             <input

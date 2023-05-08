@@ -148,6 +148,34 @@ function advancedInfo() {
   `);
 }
 
+function savePassword() {
+  const password = document.getElementById("password-output").value;
+  // Create a anchor element for download link
+  const link = document.createElement("a");
+  // Create a blob with info that will be exported
+  const file = new Blob(
+    [
+    `
+    🔑Heres the Super Secrete Password you generated🔑
+    \t\t\t${"=".repeat(password.length + 6)}
+    \t\t\t|| ${password} ||
+    \t\t\t${"=".repeat(password.length + 6)}
+    `,
+    ],
+    { type: "text/plain" }
+  );
+
+  // Add file content in the object URL
+  link.href = URL.createObjectURL(file);
+
+  // Set file name
+  link.download = "Super Secrete Password.txt";
+
+  // Add click event to save file
+  link.click();
+  URL.revokeObjectURL(link.href);  
+}
+
 function init() {
   const passwordLengthInput = document.getElementById("password-length");
   passwordLengthInput.addEventListener("input", () => {

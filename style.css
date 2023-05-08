@@ -7,6 +7,9 @@
 
   --btn-default: #fff;
   --btn-selected-default: #f6e7e7;
+
+  --light-1: white;
+  --dark-1: #1a1919;
 }
 
 body {
@@ -75,7 +78,7 @@ header .subtitle {
   align-items: center;
   justify-content: center;
 }
-#generator-container h1 {
+#generator-container h2 {
   width: 75%;
   text-align: center;
   padding: 10px 15px 15px 15px;
@@ -111,7 +114,7 @@ header .subtitle {
   align-items: center;
   justify-content: center;
 
-  margin-top: 25px;
+  margin: 35px 0 10px 0;
 }
 #generator-options input[type="number"] {
   background-color: none;
@@ -119,7 +122,7 @@ header .subtitle {
   border-bottom: solid lightgray 2px;
   font: inherit;
   color: black;
-  font-size: 25px;
+  font-size: 1.55em;
 
   text-align: center;
   outline: none;
@@ -205,13 +208,15 @@ header .subtitle {
   align-items: center;
   justify-content: center;
 }
-#range-options h2 {
+#range-options h3 {
   width: 100%;
   font-weight: 500;
   align-self: flex-start;
   border-bottom: solid var(--red-1) 2px;
   margin: 20px 0 15px 0;
   padding-bottom: 5px;
+  font-size: 1.25em;
+  font-style: italic;
 }
 #range-options div {
   font-weight: 600;
@@ -225,7 +230,7 @@ header .subtitle {
   text-align: center;
   font-family: inherit;
   font-weight: 5100;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 input[type="range"] {
