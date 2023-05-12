@@ -1,4 +1,7 @@
  # Super Secrete Password Generator
+ 
+ GitHub Pages: https://hnm938.github.io/password-generator-bootcamp/
+ 
  The assignment to create a simple password generator was given, after a couple
  of hours and some basic HTML I created a pretty effective password generator.
  
